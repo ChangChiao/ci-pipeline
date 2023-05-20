@@ -7,7 +7,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <router-view />
+  app
+  <!-- <router-view /> -->
 </template>
 
 <style>
