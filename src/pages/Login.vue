@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 const error = ref(false);
 
 const router = useRouter();
-const handleSubmit = async (event: SubmitEvent) => {
+const handleSubmit = async (event: Event) => {
   const formEl = event.target as HTMLFormElement;
   const data = new FormData(formEl);
   error.value = false;
@@ -26,7 +26,7 @@ const handleSubmit = async (event: SubmitEvent) => {
 
 <template>
   <div class="w-[250px] mx-auto">
-    <h1 class="text-center pb-2">Welcome</h1>
+    <h1 class="pb-2 text-center">Welcome</h1>
     <form
       class="flex flex-col items-center"
       id="form"
@@ -35,7 +35,7 @@ const handleSubmit = async (event: SubmitEvent) => {
       <input class="input-style" type="text" name="account" required />
       <input class="input-style" type="password" name="password" required />
       <p v-if="error" class="text-red-500">incorrect account or password</p>
-      <button class="bg-gray-800 rounded-md text-white w-20 p-2" type="submit">
+      <button class="w-20 p-2 text-white bg-gray-800 rounded-md" type="submit">
         submit
       </button>
     </form>

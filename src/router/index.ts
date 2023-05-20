@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Login from "/src/pages/Login.vue";
-import Member from "/src/pages/Member.vue";
+import Login from "@/pages/Login.vue";
+import Member from "@/pages/Member.vue";
 
 let history = createWebHashHistory();
 let routes = [

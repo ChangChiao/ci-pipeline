@@ -1,7 +1,11 @@
-import { rest } from "msw";
+import { rest, MockedRequest } from "msw";
 
+interface LoginBody {
+  account: string;
+  password: string;
+}
 export const handlers = [
-  rest.post("/login", (req, res, ctx) => {
+  rest.post("/login", (req: MockedRequest<LoginBody>, res, ctx) => {
     console.log("req", req.body);
     const { account, password } = req.body;
     const isAuthenticated = account === "admin" && password === "123456";
