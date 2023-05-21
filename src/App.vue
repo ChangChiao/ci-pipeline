@@ -4,6 +4,7 @@ import { worker } from "./mocks/browser";
 onMounted(() => {
   worker.start();
 });
+console.log("app Init");
 </script>
 
 <template>
