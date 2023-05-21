@@ -27,7 +27,8 @@ jobs:
         id: pnpm-install
         with:
           version: 8
-          run_install: false
+          run_install: |
+            - recursive: true
 
       - name: Print Hello
         run: echo "Hello"
